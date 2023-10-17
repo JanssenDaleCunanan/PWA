@@ -1,0 +1,29 @@
+{% extends 'blog/contact.html' %}
+
+{% block contact %}
+{% load static %}
+
+    <div class="d-flex flex-column confirmation-div">
+
+        <h1 class="contact-header mb-4 text-ENG">Tuko Pamoja (We Are Together)!</h1>
+        <div class="mb-3 text-ENG">
+            <p type="text" class="confirmation-text my-4 contact-header-text">Your message has joined our vibrant community celebrating African culture. Expect a warm reply soon as we dive into the rhythms of Africa together.</p>
+        </div>
+
+
+        <h1 class="contact-header mb-4 text-FR" style="display: none !important;">Tuko Pamoja (Nous sommes ensemble) !</h1>
+        <div class="mb-3 text-FR" style="display: none !important;">
+            <p type="text" class="confirmation-text my-4 contact-header-text" >Votre message a rejoint notre communauté dynamique célébrant la culture africaine. Attendez-vous à une réponse chaleureuse bientôt alors que nous plongeons ensemble dans les rythmes de l'Afrique.</p>
+        </div>
+        <a href="{% url 'contact' %}" class="btn btn-contact ms-auto me-5 d-flex justify-content-center align-items-center" >Go back</a>
+    </div>   
+        
+       
+        
+
+        
+                            
+    
+                       
+
+{% endblock %}

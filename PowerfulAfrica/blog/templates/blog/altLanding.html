@@ -1,0 +1,649 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% load static %}
+
+        <!--Articles + Ad space-->
+        <section class="px-4 px-sm-5 article-section">
+
+            <!--TOP Articles for LG-XL-XXL screens-->
+            <div class="row mt-5 p-xl-5 pb-xl-0 d-lg-flex d-md-none d-none">
+                <div class="col-6 mt-5 justify-content-start align-items-start">
+
+                    {% with articleCards|first as firstArticleCard %}
+                    <div class="image-container-topRight d-lg-flex justify-content-center align-items-center d-md-none d-none text-ENG">
+                        <img src="{{ firstArticleCard.image.url }}"  class=" " alt="">
+
+                        <a href="{{firstArticleCard.pdf_english.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-culture text-center category-{{firstArticleCard.category}}">{{firstArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{firstArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{firstArticleCard.title_french}}</div>
+                                        <div class="date-text">{{firstArticleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="image-container-topRight d-lg-flex justify-content-center align-items-center d-md-none d-none text-FR" style="display: none !important;">
+                        <img src="{{ firstArticleCard.image.url }}"  class=" " alt="">
+
+                        <a href="{{firstArticleCard.pdf_french.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-culture text-center category-{{firstArticleCard.category}}">{{firstArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{firstArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{firstArticleCard.title_french}}</div>
+                                        <div class="date-text">{{firstArticleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endwith %}
+                </div>
+
+
+                <div class="col-6 d-flex flex-column justify-content-end align-items-end">
+
+                    {% with articleCards|slice:"1:"|first as secondArticleCard %}
+                    <div class="image-container-topLeft d-lg-flex justify-content-center align-items-center mt-lg-5 margin-xl d-md-none d-none px-0 text-ENG">
+                        <img src="{{ secondArticleCard.image.url }}" width="100%" class=" " alt="">
+                        <a href="{{secondArticleCard.pdf_english.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-politics text-center category-{{secondArticleCard.category}}">{{secondArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{secondArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{secondArticleCard.title_french}}</div>
+                                        <div class="date-text">{{secondArticleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="image-container-topLeft d-lg-flex justify-content-center align-items-center mt-lg-5 margin-xl d-md-none d-none px-0 text-FR" style="display: none !important;">
+                        <img src="{{ secondArticleCard.image.url }}" width="100%" class=" " alt="">
+                        <a href="{{secondArticleCard.pdf_french.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-politics text-center category-{{secondArticleCard.category}}">{{secondArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{secondArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{secondArticleCard.title_french}}</div>
+                                        <div class="date-text">{{secondArticleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endwith %}
+                
+
+                    {% with articleCards|slice:"2:"|first as thirdArticleCard %}
+                    <div class="image-container-topLeft d-lg-flex justify-content-center align-items-center mt-lg-4 d-xl-flex d-md-none d-none px-0 text-ENG">
+                        <img src="{{ thirdArticleCard.image.url }}" width="100%" class="" alt="">
+                        <a href="{{thirdArticleCard.pdf_english.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-lit text-center category-{{thirdArticleCard.category}}">{{thirdArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{thirdArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{thirdArticleCard.title_french}}</div>
+                                        <div class="date-text">{{thirdArticleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="image-container-topLeft d-lg-flex justify-content-center align-items-center mt-lg-4 d-xl-flex d-md-none d-none px-0 text-FR" style="display: none !important;">
+                        <img src="{{ thirdArticleCard.image.url }}" width="100%" class="" alt="">
+                        <a href="{{thirdArticleCard.pdf_french.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-lit text-center category-{{thirdArticleCard.category}}">{{thirdArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{thirdArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{thirdArticleCard.title_french}}</div>
+                                        <div class="date-text">{{thirdArticleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endwith %}
+
+                </div>
+
+
+            </div>
+            
+            <!--TOP Articles for MD screens-->
+            <div class="row d-md-flex d-lg-none mt-md-5 no-gutter">
+
+                {% with articleCards|first as firstArticleCard %}
+                <div class="image-container-top-md d-lg-none d-md-flex justify-content-between align-items-start d-none text-ENG">
+                    <img src="{{ firstArticleCard.image.url }}" width="128%" class=" " alt="">
+                    <a href="{{firstArticleCard.pdf_english.url}}">
+                        <div class="image-overlay ">
+                            <div class="overlay-text px-2 w-75 ">
+                                <div class="d-flex flex-column text-container my-3">
+                                    <div class="category-culture text-center category-{{firstArticleCard.category}}">{{firstArticleCard.category}}</div>
+                                    <div class="news-text text-ENG">{{firstArticleCard.title_english}}</div>
+                                    <div class="news-text text-FR" style="display: none;">{{firstArticleCard.title_french}}</div>
+                                    <div class="date-text">{{firstArticleCard.date}}</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="image-container-top-md d-lg-none d-md-flex justify-content-between align-items-start d-none text-FR" style="display: none !important;">
+                    <img src="{{ firstArticleCard.image.url }}" width="128%" class=" " alt="">
+                    <a href="{{firstArticleCard.pdf_french.url}}">
+                        <div class="image-overlay ">
+                            <div class="overlay-text px-2 w-75 ">
+                                <div class="d-flex flex-column text-container my-3">
+                                    <div class="category-culture text-center category-{{firstArticleCard.category}}">{{firstArticleCard.category}}</div>
+                                    <div class="news-text text-ENG">{{firstArticleCard.title_english}}</div>
+                                    <div class="news-text text-FR" style="display: none;">{{firstArticleCard.title_french}}</div>
+                                    <div class="date-text">{{firstArticleCard.date}}</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endwith %}
+                    
+            </div>
+
+            <div class="row d-md-flex d-lg-none mt-md-5 no-gutter">
+              
+                {% with articleCards|slice:"1:"|first as secondArticleCard %}
+                <div class="image-container-top-md d-lg-none d-md-flex justify-content-between align-items-start d-none text-ENG">
+                    <img src="{{ secondArticleCard.image.url }}" width="128%" class=" " alt="">
+                    <a href="{{secondArticleCard.pdf_english.url}}">
+                        <div class="image-overlay ">
+                            <div class="overlay-text px-2 w-75 ">
+                                <div class="d-flex flex-column text-container my-3">
+                                    <div class="category-culture text-center category-{{secondArticleCard.category}}">{{secondArticleCard.category}}</div>
+                                    <div class="news-text text-ENG">{{secondArticleCard.title_english}}</div>
+                                    <div class="news-text text-FR" style="display: none;">{{secondArticleCard.title_french}}</div>
+                                    <div class="date-text">{{secondArticleCard.date}}</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="image-container-top-md d-lg-none d-md-flex justify-content-between align-items-start d-none text-FR" style="display: none !important;">
+                    <img src="{{ secondArticleCard.image.url }}" width="128%" class=" " alt="">
+                    <a href="{{secondArticleCard.pdf_french.url}}">
+                        <div class="image-overlay ">
+                            <div class="overlay-text px-2 w-75 ">
+                                <div class="d-flex flex-column text-container my-3">
+                                    <div class="category-culture text-center category-{{secondArticleCard.category}}">{{secondArticleCard.category}}</div>
+                                    <div class="news-text text-ENG">{{secondArticleCard.title_english}}</div>
+                                    <div class="news-text text-FR" style="display: none;">{{secondArticleCard.title_french}}</div>
+                                    <div class="date-text">{{secondArticleCard.date}}</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endwith %}
+             
+            </div>
+
+            <div class="row d-md-flex d-lg-none mt-md-5 no-gutter">
+            
+                {% with articleCards|slice:"2:"|first as thirdArticleCard %}
+                <div class="image-container-top-md d-lg-none d-md-flex justify-content-between align-items-start d-none text-ENG">
+                    <img src="{{ thirdArticleCard.image.url }}" width="128%" class=" " alt="">
+                    <a href="{{thirdArticleCard.pdf_english.url}}">
+                        <div class="image-overlay ">
+                            <div class="overlay-text px-2 w-75 ">
+                                <div class="d-flex flex-column text-container my-3">
+                                    <div class="category-culture text-center category-{{thirdArticleCard.category}}">{{thirdArticleCard.category}}</div>
+                                    <div class="news-text text-ENG">{{thirdArticleCard.title_english}}</div>
+                                    <div class="news-text text-FR" style="display: none;">{{thirdArticleCard.title_french}}</div>
+                                    <div class="date-text">{{thirdArticleCard.date}}</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="image-container-top-md d-lg-none d-md-flex justify-content-between align-items-start d-none text-FR" style="display: none !important;">
+                    <img src="{{ thirdArticleCard.image.url }}" width="128%" class=" " alt="">
+                    <a href="{{thirdArticleCard.pdf_french.url}}">
+                        <div class="image-overlay ">
+                            <div class="overlay-text px-2 w-75 ">
+                                <div class="d-flex flex-column text-container my-3">
+                                    <div class="category-culture text-center category-{{thirdArticleCard.category}}">{{thirdArticleCard.category}}</div>
+                                    <div class="news-text text-ENG">{{thirdArticleCard.title_english}}</div>
+                                    <div class="news-text text-FR" style="display: none;">{{thirdArticleCard.title_french}}</div>
+                                    <div class="date-text">{{thirdArticleCard.date}}</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endwith %}
+                    
+               
+
+            </div>
+
+            <!--TOP Articles for SM screens-->
+            <div class="row">
+                <div class="d-flex d-md-none d-lg-none justify-content-between align-items-center flex-wrap">
+
+                    {% with articleCards|first as firstArticleCard %}
+                    <div class="image-container-top-sm d-lg-none mt-lg-0 d-md-none mt-5 mt-lg-0 d-flex justify-content-center align-item-center px-0 text-ENG">
+                        <img src="{{ firstArticleCard.image.url }}"  class="image-topRight" alt="">
+                        <a href="{{firstArticleCard.pdf_english.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-culture text-center category-{{firstArticleCard.category}}">{{firstArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{firstArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{firstArticleCard.title_french}}</div>
+                                        <div class="date-text">{{firstArticleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="image-container-top-sm d-lg-none mt-lg-0 d-md-none mt-5 mt-lg-0 d-flex justify-content-center align-item-center px-0 text-FR" style="display: none !important;">
+                        <img src="{{ firstArticleCard.image.url }}"  class="image-topRight" alt="">
+                        <a href="{{firstArticleCard.pdf_french.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-culture text-center category-{{firstArticleCard.category}}">{{firstArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{firstArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{firstArticleCard.title_french}}</div>
+                                        <div class="date-text">{{firstArticleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endwith %}
+               
+
+                    {% with articleCards|slice:"1:"|first as secondArticleCard %}
+                    <div class="image-container-top-sm d-lg-none mt-lg-0 d-md-none mt-5 mt-lg-0 d-flex justify-content-center align-item-center px-0 text-ENG">
+                        <img src="{{ secondArticleCard.image.url }}"  class="image-topLeft" alt="">
+                        <a href="{{secondArticleCard.pdf_english.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-politics text-center category-{{secondArticleCard.category}}">{{secondArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{secondArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{secondArticleCard.title_french}}</div>
+                                        <div class="date-text">{{secondArticleCard.date}}</div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="image-container-top-sm d-lg-none mt-lg-0 d-md-none mt-5 mt-lg-0 d-flex justify-content-center align-item-center px-0 text-FR" style="display: none !important;">
+                        <img src="{{ secondArticleCard.image.url }}"  class="image-topLeft" alt="">
+                        <a href="{{secondArticleCard.pdf_french.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-politics text-center category-{{secondArticleCard.category}}">{{secondArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{secondArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{secondArticleCard.title_french}}</div>
+                                        <div class="date-text">{{secondArticleCard.date}}</div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endwith %}
+                
+
+                    {% with articleCards|slice:"2:"|first as thirdArticleCard %}
+                    <div class="image-container-top-sm d-lg-none mt-lg-0 d-md-none mt-5 mt-lg-0 d-flex justify-content-center align-item-center px-0 text-ENG">
+                        <img src="{{ thirdArticleCard.image.url }}"  class="image-topLeft" alt="">
+                        <a href="{{thirdArticleCard.pdf_english.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-lit text-center category-{{thirdArticleCard.category}}">{{thirdArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{thirdArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{thirdArticleCard.title_french}}</div>
+                                        <div class="date-text">{{thirdArticleCard.date}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="image-container-top-sm d-lg-none mt-lg-0 d-md-none mt-5 mt-lg-0 d-flex justify-content-center align-item-center px-0 text-FR" style="display: none !important;">
+                        <img src="{{ thirdArticleCard.image.url }}"  class="image-topLeft" alt="">
+                        <a href="{{thirdArticleCard.pdf_french.url}}">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-lit text-center category-{{thirdArticleCard.category}}">{{thirdArticleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{thirdArticleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{thirdArticleCard.title_french}}</div>
+                                        <div class="date-text">{{thirdArticleCard.date}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endwith %}
+             
+
+            
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+
+            <!--AD space-->
+            <div class="row mt-4">
+                <img src="{% static 'blog/assets/img/ad sample.png' %}" class="ad-img" alt="">
+
+            </div>
+
+            <!--BOTTOM Articles for XS-LG-XL screens-->
+            
+            <div class="row p-xl-5 pt-xl-0 my-lg-4" id="articles">
+                <div class="d-flex d-md-none d-sm-none d-lg-flex justify-content-lg-between justify-content-center align-items-center flex-wrap bottom-articles-container" id="articles">
+
+                    {% for articleCard in articleCards %}
+                        {% if forloop.counter0 >= 3 %}
+                            <div class="image-container-bottom d-lg-flex justify-content-center align-items-center mt-lg-3 d-md-block mt-5 mt-lg-0 d-block px-0 article1 text-ENG">
+                            
+                                <img src="{{articleCard.image.url}}" class="" alt="" >
+                                <a href="{{articleCard.pdf_english.url}}">
+                                    <div class="image-overlay ">
+                                        <div class="overlay-text px-2 w-75 ">
+                                            <div class="d-flex flex-column text-container my-3">
+                                                <div class="category-text text-center category-{{articleCard.category}}">{{articleCard.category}}</div>
+                                                <div class="news-text text-ENG">{{articleCard.title_english}}</div>
+                                                <div class="news-text text-FR" style="display: none;">{{articleCard.title_french}}</div>
+                                                <div class="date-text">{{articleCard.date}}</div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="image-container-bottom d-lg-flex justify-content-center align-items-center mt-lg-3 d-md-block mt-5 mt-lg-0 d-block px-0 article1 text-FR" style="display: none !important;">
+                            
+                                <img src="{{articleCard.image.url}}" class="" alt="" >
+                                <a href="{{articleCard.pdf_french.url}}">
+                                    <div class="image-overlay ">
+                                        <div class="overlay-text px-2 w-75 ">
+                                            <div class="d-flex flex-column text-container my-3">
+                                                <div class="category-text text-center category-{{articleCard.category}}">{{articleCard.category}}</div>
+                                                <div class="news-text text-ENG">{{articleCard.title_english}}</div>
+                                                <div class="news-text text-FR" style="display: none;">{{articleCard.title_french}}</div>
+                                                <div class="date-text">{{articleCard.date}}</div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                       
+                    {% endfor %}
+                    
+                </div>
+            </div>
+
+            <!--BOTTOM Articles for SM-MD screens-->
+            {% for articleCard in articleCards %}
+                {% if forloop.counter0 >= 3 %}
+                    <div class="row d-md-flex d-lg-none mt-md-5 mt-sm-5 no-gutter text-ENG">
+                    
+                        <a href="{{articleCard.pdf_english.url}}">
+                        <div class="image-container-md d-lg-none d-md-flex d-sm-flex justify-content-center align-items-center d-none article1">
+                        
+                            <img src="{{articleCard.image.url}}" href="{{articleCard.link}}" class=" " alt="">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-text text-center category-{{articleCard.category}}">{{articleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{articleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{articleCard.title_french}}</div>
+                                        <div class="date-text">{{articleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="row d-md-flex d-lg-none mt-md-5 mt-sm-5 no-gutter text-FR" style="display: none !important;">
+                    
+                        <a href="{{articleCard.pdf_french.url}}">
+                        <div class="image-container-md d-lg-none d-md-flex d-sm-flex justify-content-center align-items-center d-none article1">
+                        
+                            <img src="{{articleCard.image.url}}" class=" " alt="">
+                            <div class="image-overlay ">
+                                <div class="overlay-text px-2 w-75 ">
+                                    <div class="d-flex flex-column text-container my-3">
+                                        <div class="category-text text-center category-{{articleCard.category}}">{{articleCard.category}}</div>
+                                        <div class="news-text text-ENG">{{articleCard.title_english}}</div>
+                                        <div class="news-text text-FR" style="display: none;">{{articleCard.title_french}}</div>
+                                        <div class="date-text">{{articleCard.date}}</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </a>
+                    </div>
+                {% endif%}
+                
+            {% endfor %}
+
+       
+            
+          
+        </section>
+       
+
+        <!--logo banner-->
+        <div class="d-flex justify-content-center align-items-center z-1 mt-4 my-lg-5 w-100 bg-landing">
+            <div class="card-body d-flex justify-content-center align-items-center">
+                <div class="row d-flex justify-content-center align-items-center px-md-2  no-gutter">
+                    <div class="col-md-4 mt-md-0 col-lg-4 col-sm-12 mt-sm-2 col-12 mt-4  d-flex justify-content-md-center justify-content-start align-items-start pe-md-3 py-md-3">
+                        <div class=" logo-text d-flex justify-content-center align-items-center ms-4 ms-sm-5 ms-md-0" >
+                        Powerful Africa Magazine 
+                        </div>
+                    </div>
+                        
+                    <div class="col-md-4 col-lg-3 col-xl-4 col-12 d-flex justify-content-center align-items-center">
+                        <img src="{% static 'blog/assets/img/map.png' %}" class="logo-img ms-md-none" alt="">
+                    </div>
+
+
+                    <div class="col-md-4  col-lg-4  col-sm-7 col-9 d-md-flex  flex-md-column justify-content-md-start align-items-lg-center">
+                        <div class="p-0 p-md-0 p-lg-0 ">
+                            <h4 class="about-us text-ENG">About us</h4>
+                            <h4 class="about-us text-FR" style="display: none;">À propos de nous</h4>  
+                        </div>
+                        <div class=" mt-md-3 mt-sm-2 mt-2 p-0 p-md-0 p-lg-0">
+                            <p class="about-us-text text-ENG" id="fullText">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel neque vel augue laoreet dictum. Nulla facilisi. Pellentesque vehicula est et augue egestas bibendum. Nulla eget augue sed lorem suscipit tincidunt. Vivamus ut cursus urna.
+                            </p>
+
+                            <p class="about-us-text text-FR" style="display: none;" id="fullText">
+                                French Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel neque vel augue laoreet dictum. Nulla facilisi. Pellentesque vehicula est et augue egestas bibendum. Nulla eget augue sed lorem suscipit tincidunt. Vivamus ut urna.
+                            </p>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!--CTA-->
+        <div class="">
+            <div class="card mt-n15 z-1 my-lg-3 callToAction">
+                <div class="card-body d-md-flex justify-content-md-center align-items-md-center p-4 p-sm-5">
+                    <div class="row gx-5 d-md-flex justify-content-md-center align-items-md-center align-items-center cta-row" id="cta">
+                        <div class="col-lg-6 col-xxl-6 col-md-8 col-12 d-flex justify-content-center flex-column align-items-center text-ENG-CTA">
+                            <h1 class=" display-7 text-center  text-md-center text-lg-start fw-bold cta-header">Get the best of <span class="fst-italic">Powerful Africa</span> in your inbox.
+                            </h1>
+
+                            <p class="cta-subtext text-gray-500 mb-lg-0  text-xxl-start mt-md-4 mt-4 text-center text-lg-start ">Don’t miss out. Join our community today!</p>
+
+                        </div>
+
+                        <div class="col-lg-6 col-xxl-6 col-md-9 col-12 d-flex justify-content-center flex-column align-items-center text-FR-CTA" style="display: none !important;">
+                            <h1 class=" display-7 text-center  text-md-center text-lg-start fw-bold cta-header-french">Recevez le meilleur de <span class="fst-italic">Powerful Africa</span>  dans votre boîte 
+                                de réception.
+                            </h1>
+
+                            <p class="cta-subtext-french text-gray-500 mb-lg-0  text-xxl-start ms-md-5 ms-lg-0 mt-md-4 mt-4 text-center text-sm-start ">Ne manquez pas cette opportunité. Rejoignez notre communauté dès aujourd'hui!</p>
+
+                        </div>
+                        
+                        <div class="col-xxl-6 col-lg-6 col-md-8 mt-md-4 px-5 send-col">
+                            <form >
+                                {% csrf_token %}
+                                <div class="input-group mb-2">
+                                    <input class="form-control form-control-solid form-cta" type="email" placeholder="email@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" id="email" required/>
+                                    <input type="submit" class="btn btn-cta" value="Send"
+                                    onclick="callToActionEmail()">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="row gx-5 d-flex flex-column justify-content-center align-items-center" id="success-cta" style="display: none !important;">
+                        <div class="col-lg-8 col-md-10 d-flex flex-column justify-content-center align-items-center text-center text-ENG-CTA">
+                            
+                            <h1 class="fw-bold display-7 ">Thank you for subscribing!</h1>
+
+                            <p class="cta-subtext text-gray-500 mb-lg-0 mb-sm-3 mt-4">You're all set to receive the best of Powerful Africa in your inbox. Get ready to explore the rich tapestry of African culture, stories of greatness, and much more. We can't wait to share the wonders of this incredible continent with you.</p>
+
+                            <p class="cta-subtext text-gray-500 mb-lg-0 mb-sm-3 mt-4">Stay tuned for our upcoming newsletters and updates.</p>
+
+                            <p class="cta-subtext fst-italic text-gray-500 mb-lg-0 mb-sm-3 mt-4">Welcome to the Powerful Africa community!</p>
+                            
+                        </div>
+
+
+                        <div class="col-lg-8 col-md-10 d-flex flex-column justify-content-center align-items-center text-center text-FR-CTA" style="display: none !important;">
+                            <h1 class="fw-bold display-7 ">Merci de vous être abonné!</h1>
+
+                            <p class="cta-subtext text-gray-500 mb-lg-0 mb-sm-3 mt-4">Vous êtes prêt à recevoir le meilleur de Powerful Africa dans votre boîte de réception. Préparez-vous à explorer la riche tapisserie de la culture africaine, les histoires de grandeur et bien plus encore. Nous sommes impatients de partager les merveilles de ce continent incroyable avec vous.</p>
+
+                            <p class="cta-subtext text-gray-500 mb-lg-0 mb-sm-3 mt-4">Restez à l'écoute pour nos prochaines newsletters et mises à jour.</p>
+
+                            <p class="cta-subtext fst-italic text-gray-500 mb-lg-0 mb-sm-3 mt-4">Bienvenue dans la communauté de Powerful Africa!</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!--Magazines-->
+        <section class="p-lg-5 p-3 bg-magazines" id="magazine">
+            <div class="magazines-container">
+                <div class="d-flex justify-content-center align-items-center">
+                    <h2 class="magazine-text-header">Magazine</h2>
+                </div>
+                <div class="d-none d-lg-flex justify-content-between align-items-center flex-wrap">
+                    {% for magazine in magazines %}
+            
+                        <div class="m-lg-4 magazine-container-img d-flex justify-content-center text-ENG">
+                            <div class="magazine-frame d-flex justify-content-center">
+                                <a href="{{ magazine.pdf_english.url }}">
+                                    <img src="{{ magazine.image.url }}" class=" magazine-item" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="m-lg-4 magazine-container-img d-flex justify-content-center text-FR" style="display: none !important;">
+                            <div class="magazine-frame d-flex justify-content-center">
+                                <a href="{{ magazine.pdf_french.url }}">
+                                    <img src="{{ magazine.image.url }}" class=" magazine-item" alt="">
+                                
+                                </a>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                   
+                    
+                </div>
+    
+                <div class="d-flex d-lg-none justify-content-around align-items-center flex-wrap px-sm-5 px-md-0">
+                    {% for magazine in magazines %}
+                        <div class=" m-3 magazine-container-img d-flex justify-content-center text-ENG">
+                            <div class="magazine-frame d-flex justify-content-center">
+                                <a href="{{ magazine.pdf_english.url }}">
+                                    <img src="{{ magazine.image.url }}" class=" magazine-item" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="m-3 magazine-container-img d-flex justify-content-center text-FR" style="display: none !important;">
+                            <div class="magazine-frame d-flex justify-content-center">
+                                <a href="{{ magazine.pdf_french.url }}">
+                                    <img src="{{ magazine.image.url }}" width="300px"  alt="{{ magazine.title_english }}">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                   
+                    
+                </div>
+
+            </div>
+            
+
+        </section>
+
+{% endblock %}

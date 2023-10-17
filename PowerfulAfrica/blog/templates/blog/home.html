@@ -1,0 +1,170 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerful Africa</title>
+
+   
+
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top row px-3 bg-nav mb-5" id="mainNav">
+        <div class="container d-flex justify-content-between my-3 ms-3">
+            
+            <img src="{% static 'blog/assets/img/PWA.png' %}" width="100px"  alt="">
+        
+            <button class="navbar-toggler navbar-toggler-right me-5" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse d-flex d-lg-none justify-content-end me-5 collapsed" id="navbarResponsive">
+                <ul class="navbar-nav me-auto me-sm-auto d-lg-none ml-lg-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'alt' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="">Magazines</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="">Articles</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <ul class=" navbar-nav d-none d-sm-none d-md-none d-lg-flex me-sm-auto pe-3">
+                <li class="nav-item px-2">
+                <a class="nav-link" href="{% url 'alt' %}">Home</a>
+                </li>
+                <li class="nav-item px-2">
+                <a class="nav-link" href="">Magazines</a>
+                </li>
+                <li class="nav-item px-2">
+                <a class="nav-link" href="">Contact</a>
+                </li>
+                <li class="nav-item px-2">
+                <a class="nav-link" href="">Articles</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+   
+    <section class="container mt-5">
+        <div class="mt-5 pt-5 ">
+            <div class="row ">
+                <div class="col-lg-8 col-12 d-flex justify-content-center align-items-start mt-5 p-sm-3">
+                    <div class="w-lg-50 w-100  fw-bold fs-2 d-flex justify-content-center align-items-center text-center me-lg-5" >
+                       Powerful Africa Magazine 
+                    </div>
+                    <img src="{% static 'blog/assets/img/map.png' %}" width="50%" class="pt-5 me-5" alt="">
+                    <img src="" alt="">
+                </div>
+
+                <div class="col-lg-4 col-12 d-flex flex-column mt-5 ">
+                    <div class="p-5 p-md-0 p-lg-0">
+                        <h4>Edito</h4> 
+                    </div>
+                    <div class="mt-3 p-5 p-md-0 p-lg-0">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel neque vel augue laoreet dictum. Nulla facilisi. Pellentesque vehicula est et augue egestas bibendum. Nulla eget augue sed lorem suscipit tincidunt. Vivamus ut cursus urna. Curabitur ac justo nec libero bibendum vestibulum ac nec leo. In hac habitasse platea dictumst. Sed non suscipit lectus. Quisque ut fringilla neque. Sed ut dapibus turpis. Sed ac lorem ligula. Nulla facilisi. Cras convallis est eu arcu dapibus, vel interdum lectus bibendum. Sed id odio nec arcu cursus volutpat in id urna. Vivamus convallis odio nec mi interdum, at convallis urna vehicula. Vivamus non dui eu nisi cursus feugiat. Curabitur ut est vitae quam dignissim bibendum. Nullam nec turpis eget risus viverra scelerisque. Proin cursus turpis ut efficitur vehicula. Integer efficitur dolor ut tortor euismod, a viverra ex fermentum.
+
+                            Sed at tortor eget risus hendrerit laoreet ut eget lorem. Integer euismod leo ac consectetur sodales. Suspendisse auctor ex et volutpat tincidunt. Donec non eros et ex vehicula euismod ut eu urna. Sed varius augue vitae arcu bibendum, eget luctus elit semper. Suspendisse placerat bibendum semper. Sed at posuere justo. Nam ac urna justo. Sed a leo vehicula, efficitur nunc id, tristique metus. Integer bibendum, turpis eget ullamcorper ultrices, neque nulla fermentum lorem, quis ultricies erat odio eu orci. Donec consequat augue a dui blandit, id convallis odio hendrerit. Vestibulum elementum quam et tortor iaculis, non congue turpis rhoncus. Vestibulum bibendum purus a sapien eleifend, non hendrerit libero elementum. Curabitur fringilla purus sit amet erat facilisis, eget tempor nunc sagittis. Vivamus elementum lacinia turpis, non cursus nisl dictum a. Integer id viverra ex, nec feugiat nulla.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="container py-5 mt-5">
+        <div class="card mt-n15 py-5 z-1 bg-secondary">
+            <div class="card-body p-5">
+                <div class="row gx-5 align-items-center" id="cta">
+                    <div class="col-lg-6">
+                        <h1 class=" display-7 fw-bold">Get the best of <span class="fst-italic">Powerful Africa</span> in your inbox.</h1>
+                        <p class="lead text-gray-500 mb-lg-0 mb-sm-3">Don't miss out. Join our community today!</p>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <form >
+                            <div class="input-group mb-2">
+                                <input class="form-control form-control-solid" type="email" placeholder="email@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" id="email" required/>
+                                <input type="submit" class="btn btn-primary" value="Send"
+                                onclick="callToActionEmail()">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row gx-5 align-items-center" id="success-cta" style="display: none;">
+                    <div class="col-lg-12 d-flex justify-content-center align-items-center">
+                        <h1 class="text-white display-7 ">Thank you for your inquiry. We'll be in touch very soon!</h1>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="p-lg-5 p-3 bg-magazines">
+        <div class="d-flex justify-content-center align-items-center">
+            <h2>Magazine</h2>
+        </div>
+        <div class="d-none d-lg-flex justify-content-between align-items-center flex-wrap">
+            <img src="{% static 'blog/assets/img/1.png' %}" width="250px" class="pt-5 m-lg-4" alt="">
+            <img src="{% static 'blog/assets/img/2.png' %}" width="250px" class="pt-5 m-lg-4" alt="">
+            <img src="{% static 'blog/assets/img/3.png' %}" width="250px" class="pt-5 m-lg-4" alt="">
+            <img src="{% static 'blog/assets/img/4.png' %}" width="250px" class="pt-5 m-lg-4" alt="">
+            <img src="{% static 'blog/assets/img/5.png' %}" width="250px" class="pt-5 m-lg-4" alt="">
+            <img src="{% static 'blog/assets/img/6.png' %}" width="250px" class="pt-5 m-lg-4" alt="">
+            <img src="{% static 'blog/assets/img/7.png' %}" width="250px" class="pt-5 m-lg-4" alt="">
+            <img src="{% static 'blog/assets/img/8.png' %}" width="250px" class="pt-5 m-lg-4" alt="">
+            <img src="{% static 'blog/assets/img/9.png' %}" width="250px" class="pt-5 m-lg-4" alt="">
+        </div>
+
+        <div class="d-flex d-lg-none justify-content-around align-items-center flex-wrap px-sm-5 px-md-0">
+            <img src="{% static 'blog/assets/img/1.png' %}" width="300px" class="pt-5 m-3" alt="">
+            <img src="{% static 'blog/assets/img/2.png' %}" width="300px" class="pt-5 m-3" alt="">
+            <img src="{% static 'blog/assets/img/3.png' %}" width="300px" class="pt-5 m-3" alt="">
+            <img src="{% static 'blog/assets/img/4.png' %}" width="300px" class="pt-5 m-3" alt="">
+            <img src="{% static 'blog/assets/img/5.png' %}" width="300px" class="pt-5 m-3" alt="">
+            <img src="{% static 'blog/assets/img/6.png' %}" width="300px" class="pt-5 m-3" alt="">
+            <img src="{% static 'blog/assets/img/7.png' %}" width="300px" class="pt-5 m-3" alt="">
+            <img src="{% static 'blog/assets/img/8.png' %}" width="300px" class="pt-5 m-3" alt="">
+            <img src="{% static 'blog/assets/img/9.png' %}" width="300px" class="pt-5 m-3" alt="">
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="{% static 'blog/js/scripts.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+</body>
+</html>

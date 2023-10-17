@@ -621,7 +621,7 @@
     
                 <div class="d-flex d-lg-none justify-content-around align-items-center flex-wrap px-sm-5 px-md-0">
                     {% for magazine in magazines %}
-                        <div class=" m-3 magazine-container-img d-flex justify-content-center text-ENG">
+                        <div class=" m-sm-3 my-3 magazine-container-img d-flex justify-content-center text-ENG">
                             <div class="magazine-frame d-flex justify-content-center">
                                 <a href="{{ magazine.pdf_english.url }}">
                                     <img src="{{ magazine.image.url }}" class=" magazine-item" alt="">
@@ -629,7 +629,7 @@
                             </div>
                         </div>
 
-                        <div class="m-3 magazine-container-img d-flex justify-content-center text-FR" style="display: none !important;">
+                        <div class="m-sm-3 my-3 magazine-container-img d-flex justify-content-center text-FR" style="display: none !important;">
                             <div class="magazine-frame d-flex justify-content-center">
                                 <a href="{{ magazine.pdf_french.url }}">
                                     <img src="{{ magazine.image.url }}" width="300px"  alt="{{ magazine.title_english }}">

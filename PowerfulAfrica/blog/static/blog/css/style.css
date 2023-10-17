@@ -1299,7 +1299,7 @@ body{
 }
 
 .magazine-container-img{
-  width: 380px;
+  width: auto;
   height: 451px;
   overflow: hidden;
 }

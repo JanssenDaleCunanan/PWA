@@ -337,7 +337,7 @@ body{
 }
 
 .image-topRight {
-  width: inherit;
+  width: max-content;
   height: max-content;
   
 }
@@ -405,19 +405,19 @@ body{
 }
 
 /*XS screens for bottom articles*/
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .image-container-bottom{
     position: relative;
     width: 100%;
     height: 467px;
     overflow-y: hidden !important;
     overflow-x: hidden ;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
   }
   .image-container-bottom img{
-    width: max-content;
+    width: auto;
     height: 100%;
   }
 }

@@ -1464,7 +1464,7 @@ body{
 
 .contact-input{
   background-color: #E5E5E5;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 0;
   max-width: 491px;
   margin-top: 40%;
@@ -1472,7 +1472,7 @@ body{
 
 .contact-input::placeholder {
   color: black;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .contact-input:focus {
@@ -1609,7 +1609,7 @@ background-color: none;
   
   .contact-input{
     background-color: #E5E5E5;
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 0;
     max-width: 491px;
     margin-top: 40%;
@@ -1617,7 +1617,8 @@ background-color: none;
   
   .contact-input::placeholder {
     color: black;
-    font-weight: bold;
+    font-weight: 500;
+    
   }
   
   .contact-input:focus {

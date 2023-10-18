@@ -550,10 +550,14 @@
                         <div class="col-xxl-6 col-lg-6 col-md-8 mt-md-4 px-5 send-col">
                             <form >
                                 {% csrf_token %}
-                                <div class="input-group mb-2">
+                                <div class="input-group mb-2 text-ENG-CTA">
                                     <input class="form-control form-control-solid form-cta" type="email" placeholder="email@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" id="email" required/>
-                                    <input type="submit" class="btn btn-cta" value="Send"
-                                    onclick="callToActionEmail()">
+                                    <input type="submit" class="btn btn-cta " value="Send" onclick="callToActionEmail()">
+                                </div>
+
+                                <div class="input-group mb-2 text-FR-CTA" style="display: none;">
+                                    <input class="form-control form-control-solid form-cta" type="email" placeholder="email@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" id="email" required/>
+                                    <input type="submit" class="btn btn-cta" value="Envoyer" onclick="callToActionEmail()">
                                 </div>
                             </form>
                         </div>
